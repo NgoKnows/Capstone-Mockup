@@ -53,7 +53,6 @@ class SuggestionCard extends Component {
                         <input className="filled-in" id={title} type="checkbox"/>
                         <label htmlFor={title}>I like this suggestion</label>
                     </p>
-                    <a onClick={toggleOverlay}>More Info</a>
                 </div>
             )
         } else {
