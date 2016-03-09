@@ -6,7 +6,9 @@ import DevTools from 'containers/DevTools'
 import * as actions from 'flux/actions'
 
 import App from 'containers/App'
+import FirstPage from 'components/FirstPage/FirstPage'
 import HomePage from 'components/HomePage/HomePage'
+import SignInForm from 'components/SignIn/SignIn'
 import ProfilePage from 'components/ProfilePage/ProfilePage'
 import ProfilePageList from 'components/ProfilePage/ProfilePageList'
 import ProfilePageAttributes from 'components/ProfilePage/ProfilePageAttributes'
@@ -24,12 +26,13 @@ export default class Root extends Component {
                 <div>
                     <Router history={browserHistory}>
                         <Route path='/' component={App}>
-                            <IndexRoute component={HomePage} />
-                            <Route path='profile'>
-                                <IndexRoute component={ProfilePage}/>
+                            <IndexRoute component={FirstPage} />
+                            <Route path='home' component={HomePage} />
+                            <Route path='profile' component={ProfilePage}>
                                 <Route path='list' component={ProfilePageList} />
                                 <Route path='attributes' component={ProfilePageAttributes} />
                             </Route>
+                            <Route path="signin" component={SignInForm} />
                             <Route path='suggestions' component={SuggestionsPage} />
                             <Route path='signup'>
                                 <Route path='select' component={SignUpSelect}/>
@@ -38,7 +41,6 @@ export default class Root extends Component {
                             </Route>
                         </Route>
                     </Router>
-                    <DevTools/>
                 </div>
             </Provider>
         )

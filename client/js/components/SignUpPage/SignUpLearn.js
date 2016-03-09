@@ -37,17 +37,23 @@ class SignUpLearn extends Component {
                         title={suggestions.sam.title}
                         description={suggestions.sam.description}
                         imageName={'sam'}
-                        toggleOverlay={() => this.toggleOverlay('sam')}/>
+                        toggleOverlay={() => this.toggleOverlay('sam')}
+                        signup={true}
+                    />
                     <SuggestionCard
                         title={suggestions.wingluke.title}
                         description={suggestions.wingluke.description}
                         imageName={'wingluke'}
-                        toggleOverlay={() => this.toggleOverlay('wingluke')}/>
+                        toggleOverlay={() => this.toggleOverlay('wingluke')}
+                        signup={true}
+                    />
                     <SuggestionCard
                         title={suggestions.emp.title}
                         description={suggestions.emp.description}
                         imageName={'emp'}
-                        toggleOverlay={() => this.toggleOverlay('emp')}/>
+                        toggleOverlay={() => this.toggleOverlay('emp')}
+                        signup={true}
+                    />
                 </div>
                 {this.state.overlay ?
                     <div onClick={() => this.toggleOverlay()} className="overlay">
@@ -61,7 +67,7 @@ class SignUpLearn extends Component {
                     </div> : null
                 }
                 <Link to="/signup/form">
-                    <button className="waves-effect waves-light btn">Done!</button>
+                    <button className="waves-effect waves-light btn">Next</button>
                 </Link>
             </div>
         );

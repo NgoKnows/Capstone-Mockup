@@ -3,17 +3,16 @@ import Radium from 'radium'
 
 import { Link } from 'react-router'
 
-class SignUpForm extends Component {
+class SignInForm extends Component {
     render() {
         return (
             <div>
                 <div style={STYLES.form}>
-                    <h3>Sign Up!</h3>
+                    <h3>Sign In!</h3>
                     <input style={STYLES.input} placeholder="Username" type="text"/>
                     <input style={STYLES.input} placeholder="Password" type="password"/>
-                    <input style={STYLES.input} placeholder="Confirm Password" type="password"/>
                     <Link to="/home">
-                        <button className="waves-effect waves-light btn">Done!</button>
+                        <button className="waves-effect waves-light btn">Login!</button>
                     </Link>
                 </div>
             </div>
@@ -35,7 +34,4 @@ const STYLES = {
     }
 };
 
-SignUpForm.propTypes = {};
-SignUpForm.defaultProps = {};
-
-export default Radium(SignUpForm);
+export default Radium(SignInForm);

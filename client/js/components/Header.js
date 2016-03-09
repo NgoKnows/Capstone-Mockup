@@ -9,7 +9,7 @@ class Header extends Component {
     render() {
         return (
             <div style={STYLES.container}>
-                <Link to="/">
+                <Link to="/home">
                     <div key="home" style={STYLES.icon.container}>
                         <i className="fa fa-home"/>
                         <div style={STYLES.icon.caption}>Home</div>
@@ -19,7 +19,7 @@ class Header extends Component {
                 <Link to="/">
                     <img style={STYLES.image} src={logo} />
                 </Link>
-                <Link to="profile">
+                <Link to="profile/list">
                     <div key="profile" style={STYLES.icon.container}>
                         <i className="fa fa-user"/>
                         <div style={STYLES.icon.caption}>Profile</div>

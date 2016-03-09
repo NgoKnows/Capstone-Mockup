@@ -11,7 +11,7 @@ class SignUpSelect extends Component {
             <div style={STYLES.container}>
                 <h3>Tell us how much you like these categories</h3>
                 <div style={STYLES.sliderContainer}>
-                    <Slider title="Price"/>
+                    <Slider title="Price" price={true}/>
                     <Slider title="Culture (History, Art)"/>
                     <Slider title="Food"/>
                     <Slider title="Outdoors"/>
@@ -21,7 +21,7 @@ class SignUpSelect extends Component {
                     <Slider title="Sports"/>
                 </div>
                 <Link to="/signup/learn">
-                    <button className="waves-effect waves-light btn">Done!</button>
+                    <button className="waves-effect waves-light btn">Next</button>
                 </Link>
             </div>
         );

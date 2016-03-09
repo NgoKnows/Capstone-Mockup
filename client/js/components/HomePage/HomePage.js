@@ -18,11 +18,6 @@ class HomePage extends Component {
                         <button className="waves-effect waves-light btn">Random Suggestion!</button>
                     </div>
                 </Link>
-                <Link to="signup/select">
-                <div style={STYLES.item}>
-                    <div style={STYLES.notUser}>Not A User?</div>
-                </div>
-                </Link>
             </div>
         );
     }

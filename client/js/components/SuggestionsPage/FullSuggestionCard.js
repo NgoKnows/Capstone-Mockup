@@ -4,11 +4,17 @@ import Radium from 'radium'
 import sam from '../../../images/sam.jpg'
 import wingluke from '../../../images/wingluke.jpg'
 import emp from '../../../images/emp.jpg'
+import dz from '../../../images/dz.jpeg'
+import paseo from '../../../images/paseo.jpg'
+import japonessa from '../../../images/japonessa.jpg'
 
 const images = {
     sam,
     wingluke,
-    emp
+    emp,
+    dz,
+    paseo,
+    japonessa
 }
 
 class SuggestionCard extends Component {
@@ -26,10 +32,6 @@ class SuggestionCard extends Component {
                     <div style={STYLES.category}><span style={STYLES.cat}>Phone Number:</span>{' (206) 623-5124'}</div>
                     <div style={STYLES.category}><span style={STYLES.cat}>Hours Today:</span>{' 10AM–5PM'}</div>
 
-                </div>
-                <div className="card-action">
-                    <a>Add to list!</a>
-                    <a>I don't like this!</a>
                 </div>
             </div>
         );

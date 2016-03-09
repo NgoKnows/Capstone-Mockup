@@ -1,14 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 import Radium from 'radium'
 
+import { Link } from 'react-router'
+
 import Slider from '../Slider'
 class ProfilePageAttributes extends Component {
     render() {
         return (
             <div style={STYLES.container}>
-                <h2>Your attributes!</h2>
                 <div style={STYLES.sliderContainer}>
-                    <Slider title="Price"/>
+                    <Slider title="Price" price={true}/>
                     <Slider title="Culture (History, Art)"/>
                     <Slider title="Food"/>
                     <Slider title="Outdoors"/>
@@ -17,6 +18,9 @@ class ProfilePageAttributes extends Component {
                     <Slider title="Shopping"/>
                     <Slider title="Sports"/>
                 </div>
+                <Link to="/home">
+                    <button className="waves-effect waves-light btn">Save!</button>
+                </Link>
             </div>
         );
     }
@@ -26,7 +30,8 @@ const STYLES = {
     container: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: '36px'
     },
 
     sliderContainer: {
